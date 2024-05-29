@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>70a712af-8336-44fd-a863-4cce7860bcad</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QRCodeBankConnector\QRCodeBankConnector.csproj" />
+    <ProjectReference Include="..\QRCodeBusinessService\QRCodeBusinessService.csproj" />
+    <ProjectReference Include="..\QRCodeFileResotitory\QRCodeFileRepository.csproj" />
+    <ProjectReference Include="..\QRCodeServiceAuthentication\QRCodeServiceAuthentication.csproj" />
+  </ItemGroup>
+
+</Project>
